@@ -1,0 +1,22 @@
+Structure des dossiers d'images à créer :
+
+/public/images/
+├── hero-matcha.jpg (Image principale de la page d'accueil)
+├── about-tea-leaves.jpg (Image des feuilles de thé pour la section "À propos")
+├── products/
+│   ├── matcha-premium.jpg
+│   ├── bol-matcha.jpg
+│   ├── fouet-bambou.jpg
+│   └── ... (autres produits)
+└── avatars/
+    ├── sophie.jpg
+    ├── thomas.jpg
+    ├── emma.jpg
+    └── default-avatar.jpg (fallback)
+
+Recommandations :
+- Taille recommandée pour les images produits : 400x400px
+- Taille pour l'image hero : 800x600px
+- Taille pour les avatars : 200x200px
+- Format : JPG ou WebP pour les photos, PNG pour les logos
+- Optimiser les images pour le web (compression)

@@ -1,0 +1,72 @@
+:root {
+  /* Palette principale */
+  --color-primary: #606c38;
+  --color-primary-dark: #283618;
+  --color-background: #fefae0;
+  --color-secondary: #dda15e;
+  --color-accent: #bc6c25;
+
+  /* Variations d'opacité */
+  --color-secondary-light: rgba(221, 161, 94, 0.1);
+  --color-secondary-medium: rgba(221, 161, 94, 0.2);
+  --color-secondary-strong: rgba(221, 161, 94, 0.3);
+
+  /* États des boutons */
+  --btn-primary-bg: var(--color-primary);
+  --btn-primary-text: var(--color-background);
+  --btn-primary-hover: var(--color-primary-dark);
+
+  --btn-secondary-border: var(--color-primary);
+  --btn-secondary-text: var(--color-primary);
+  --btn-secondary-hover: var(--color-secondary-medium);
+}
+
+/* Classes utilitaires pour les couleurs */
+.text-primary {
+  color: var(--color-primary);
+}
+.text-primary-dark {
+  color: var(--color-primary-dark);
+}
+.text-secondary {
+  color: var(--color-secondary);
+}
+.text-accent {
+  color: var(--color-accent);
+}
+.text-background {
+  color: var(--color-background);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+.bg-primary-dark {
+  background-color: var(--color-primary-dark);
+}
+.bg-background {
+  background-color: var(--color-background);
+}
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+.bg-accent {
+  background-color: var(--color-accent);
+}
+
+.bg-secondary-light {
+  background-color: var(--color-secondary-light);
+}
+.bg-secondary-medium {
+  background-color: var(--color-secondary-medium);
+}
+.bg-secondary-strong {
+  background-color: var(--color-secondary-strong);
+}
+
+.border-secondary {
+  border-color: var(--color-secondary);
+}
+.border-primary {
+  border-color: var(--color-primary);
+}

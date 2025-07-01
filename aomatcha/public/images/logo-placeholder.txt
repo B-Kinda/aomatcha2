@@ -1,0 +1,12 @@
+Logo à placer :
+
+Chemin : /public/images/logo.png
+Taille recommandée : 40x40px (ou 80x80px pour la version haute résolution)
+Format : PNG avec transparence
+Forme : Carré ou légèrement rectangulaire
+
+Alternatives possibles :
+- logo.svg (pour une image vectorielle)
+- logo.webp (pour une meilleure compression)
+
+Le logo sera affiché à côté du texte "AoMatcha" dans le header.

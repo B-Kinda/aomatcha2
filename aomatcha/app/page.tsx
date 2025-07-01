@@ -1,72 +1,68 @@
+import Image from "next/image";
+import styles from "./styles/components/homepage.module.css";
+
 export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-green-50 py-24">
-        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center">
-          <div className="md:w-1/2 mb-10 md:mb-0">
-            <h1 className="text-4xl md:text-5xl font-bold text-green-900 mb-4">
+      <section className={styles.hero}>
+        <div className={styles.heroContainer}>
+          <div className={styles.heroContent}>
+            <h1 className={styles.heroTitle}>
               Découvrez le véritable goût du Matcha
             </h1>
-            <p className="text-lg text-gray-700 mb-8">
+            <p className={styles.heroDescription}>
               Notre matcha premium est importé directement du Japon pour vous
               offrir une expérience authentique et des bienfaits pour la santé
               exceptionnels.
             </p>
-            <div className="flex space-x-4">
-              <a
-                href="/produits"
-                className="px-6 py-3 bg-green-700 text-white rounded-md hover:bg-green-800 transition"
-              >
+            <div className={styles.heroActions}>
+              <a href="/produits" className={styles.btnPrimary}>
                 Découvrir nos produits
               </a>
-              <a
-                href="/a-propos"
-                className="px-6 py-3 border border-green-700 text-green-700 rounded-md hover:bg-green-50 transition"
-              >
+              <a href="/a-propos" className={styles.btnSecondary}>
                 En savoir plus
               </a>
             </div>
           </div>
-          <div className="md:w-1/2 flex justify-center">
-            <div className="relative w-full max-w-md h-80">
-              {/* Placeholder for hero image - replace with your actual image */}
-              <div className="absolute inset-0 bg-green-200 rounded-lg flex items-center justify-center">
-                <span className="text-green-800">Image de Matcha</span>
-              </div>
+          <div className={styles.heroImage}>
+            <div className={styles.imagePlaceholder}>
+              <Image
+                src="/images/hero-matcha.jpg"
+                alt="Matcha premium japonais"
+                fill
+                className={styles.imageContent}
+                priority
+              />
             </div>
           </div>
         </div>
       </section>
 
       {/* Featured Products Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Nos produits populaires
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <section className={styles.products}>
+        <div className={styles.productsContainer}>
+          <h2 className={styles.sectionTitle}>Nos produits populaires</h2>
+          <div className={styles.productsGrid}>
             {/* Product Card 1 */}
-            <div className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
-              <div className="h-64 bg-gray-100 relative">
-                {/* Product image placeholder */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-gray-500">Image de Matcha Premium</span>
-                </div>
+            <div className={styles.productCard}>
+              <div className={styles.productImage}>
+                <Image
+                  src="/images/products/matcha-premium.jpg"
+                  alt="Matcha Premium Grade"
+                  fill
+                  className={styles.productImageContent}
+                />
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">
-                  Matcha Premium Grade
-                </h3>
-                <p className="text-gray-600 mb-4">
+              <div className={styles.productContent}>
+                <h3 className={styles.productTitle}>Matcha Premium Grade</h3>
+                <p className={styles.productDescription}>
                   Notre matcha de la plus haute qualité, parfait pour les
                   cérémonies et une dégustation raffinée.
                 </p>
-                <div className="flex justify-between items-center">
-                  <span className="text-xl font-bold text-green-700">
-                    29,99 €
-                  </span>
-                  <button className="px-4 py-2 bg-green-700 text-white rounded hover:bg-green-800 transition">
+                <div className={styles.productFooter}>
+                  <span className={styles.productPrice}>29,99 €</span>
+                  <button className={styles.addToCartBtn}>
                     Ajouter au panier
                   </button>
                 </div>
@@ -74,26 +70,26 @@ export default function HomePage() {
             </div>
 
             {/* Product Card 2 */}
-            <div className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
-              <div className="h-64 bg-gray-100 relative">
-                {/* Product image placeholder */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-gray-500">Image de Bol à Matcha</span>
-                </div>
+            <div className={styles.productCard}>
+              <div className={styles.productImage}>
+                <Image
+                  src="/images/products/bol-matcha.jpg"
+                  alt="Bol à Matcha Traditionnel"
+                  fill
+                  className={styles.productImageContent}
+                />
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">
+              <div className={styles.productContent}>
+                <h3 className={styles.productTitle}>
                   Bol à Matcha Traditionnel
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className={styles.productDescription}>
                   Bol artisanal fabriqué selon les traditions japonaises pour
                   préparer votre matcha.
                 </p>
-                <div className="flex justify-between items-center">
-                  <span className="text-xl font-bold text-green-700">
-                    24,99 €
-                  </span>
-                  <button className="px-4 py-2 bg-green-700 text-white rounded hover:bg-green-800 transition">
+                <div className={styles.productFooter}>
+                  <span className={styles.productPrice}>24,99 €</span>
+                  <button className={styles.addToCartBtn}>
                     Ajouter au panier
                   </button>
                 </div>
@@ -101,26 +97,26 @@ export default function HomePage() {
             </div>
 
             {/* Product Card 3 */}
-            <div className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
-              <div className="h-64 bg-gray-100 relative">
-                {/* Product image placeholder */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-gray-500">Image de Fouet Bambou</span>
-                </div>
+            <div className={styles.productCard}>
+              <div className={styles.productImage}>
+                <Image
+                  src="/images/products/fouet-bambou.jpg"
+                  alt="Fouet en Bambou (Chasen)"
+                  fill
+                  className={styles.productImageContent}
+                />
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">
+              <div className={styles.productContent}>
+                <h3 className={styles.productTitle}>
                   Fouet en Bambou (Chasen)
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className={styles.productDescription}>
                   Fouet traditionnel en bambou pour obtenir la mousse parfaite
                   pour votre matcha.
                 </p>
-                <div className="flex justify-between items-center">
-                  <span className="text-xl font-bold text-green-700">
-                    19,99 €
-                  </span>
-                  <button className="px-4 py-2 bg-green-700 text-white rounded hover:bg-green-800 transition">
+                <div className={styles.productFooter}>
+                  <span className={styles.productPrice}>19,99 €</span>
+                  <button className={styles.addToCartBtn}>
                     Ajouter au panier
                   </button>
                 </div>
@@ -128,10 +124,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="text-center mt-12">
-            <a
-              href="/produits"
-              className="px-6 py-3 bg-green-700 text-white rounded-md hover:bg-green-800 inline-block transition"
-            >
+            <a href="/produits" className={styles.btnPrimary}>
               Voir tous les produits
             </a>
           </div>
@@ -139,63 +132,59 @@ export default function HomePage() {
       </section>
 
       {/* About Matcha Section */}
-      <section className="py-16 bg-green-50">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center">
-            <div className="md:w-1/2 mb-8 md:mb-0">
-              <div className="relative w-full max-w-md h-80 mx-auto">
-                {/* Placeholder for about image */}
-                <div className="absolute inset-0 bg-green-200 rounded-lg flex items-center justify-center">
-                  <span className="text-green-800">
-                    Image de Feuilles de Thé
-                  </span>
-                </div>
-              </div>
+      <section className={styles.about}>
+        <div className={styles.aboutContainer}>
+          <div className={styles.aboutImage}>
+            <div className={styles.imagePlaceholder}>
+              <Image
+                src="/images/about-tea-leaves.jpg"
+                alt="Feuilles de thé matcha cultivées à l'ombre"
+                fill
+                className={styles.imageContent}
+              />
             </div>
-            <div className="md:w-1/2 md:pl-12">
-              <h2 className="text-3xl font-bold text-green-900 mb-6">
-                Qu&apos;est-ce que le Matcha?
-              </h2>
-              <p className="text-gray-700 mb-4">
-                Le matcha est un thé vert japonais finement moulu qui offre un
-                goût unique et des bienfaits exceptionnels pour la santé.
-                Contrairement aux thés traditionnels, vous consommez la feuille
-                entière, ce qui vous apporte plus d&apos;antioxydants et de
-                nutriments.
-              </p>
-              <p className="text-gray-700 mb-6">
-                Nos feuilles de thé sont cultivées à l&apos;ombre pendant les
-                dernières semaines avant la récolte, ce qui augmente la teneur
-                en chlorophylle et en acides aminés, créant ainsi la saveur
-                douce et umami caractéristique du matcha de qualité.
-              </p>
-              <a
-                href="/a-propos"
-                className="text-green-700 font-semibold hover:underline"
-              >
-                En savoir plus sur le matcha →
-              </a>
-            </div>
+          </div>
+          <div className={styles.aboutContent}>
+            <h2 className={styles.aboutTitle}>Qu&apos;est-ce que le Matcha?</h2>
+            <p className={styles.aboutText}>
+              Le matcha est un thé vert japonais finement moulu qui offre un
+              goût unique et des bienfaits exceptionnels pour la santé.
+              Contrairement aux thés traditionnels, vous consommez la feuille
+              entière, ce qui vous apporte plus d&apos;antioxydants et de
+              nutriments.
+            </p>
+            <p className={styles.aboutText}>
+              Nos feuilles de thé sont cultivées à l&apos;ombre pendant les
+              dernières semaines avant la récolte, ce qui augmente la teneur en
+              chlorophylle et en acides aminés, créant ainsi la saveur douce et
+              umami caractéristique du matcha de qualité.
+            </p>
+            <a href="/a-propos" className={styles.aboutLink}>
+              En savoir plus sur le matcha →
+            </a>
           </div>
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Ce que nos clients disent
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <section className={styles.testimonials}>
+        <div className={styles.productsContainer}>
+          <h2 className={styles.sectionTitle}>Ce que nos clients disent</h2>
+          <div className={styles.testimonialsGrid}>
             {/* Testimonial 1 */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="flex items-center mb-4">
-                <div className="h-12 w-12 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 mr-4">
-                  <span>S</span>
+            <div className={styles.testimonialCard}>
+              <div className={styles.testimonialHeader}>
+                <div className={styles.testimonialAvatar}>
+                  <Image
+                    src="/images/avatars/sophie.jpg"
+                    alt="Sophie L."
+                    fill
+                    className={styles.avatarImage}
+                  />
                 </div>
                 <div>
-                  <h3 className="font-semibold">Sophie L.</h3>
-                  <div className="flex text-yellow-400">
+                  <h3 className={styles.testimonialName}>Sophie L.</h3>
+                  <div className={styles.testimonialStars}>
                     {[...Array(5)].map((_, i) => (
                       <svg
                         key={i}
@@ -210,7 +199,7 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
-              <p className="text-gray-600">
+              <p className={styles.testimonialText}>
                 &quot;Le matcha d&apos;AoMatcha est simplement exceptionnel. Sa
                 saveur est douce avec des notes d&apos;umami parfaitement
                 équilibrées. Je l&apos;utilise tous les matins et j&apos;ai
@@ -220,14 +209,19 @@ export default function HomePage() {
             </div>
 
             {/* Testimonial 2 */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="flex items-center mb-4">
-                <div className="h-12 w-12 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 mr-4">
-                  <span>T</span>
+            <div className={styles.testimonialCard}>
+              <div className={styles.testimonialHeader}>
+                <div className={styles.testimonialAvatar}>
+                  <Image
+                    src="/images/avatars/thomas.jpg"
+                    alt="Thomas B."
+                    fill
+                    className={styles.avatarImage}
+                  />
                 </div>
                 <div>
-                  <h3 className="font-semibold">Thomas B.</h3>
-                  <div className="flex text-yellow-400">
+                  <h3 className={styles.testimonialName}>Thomas B.</h3>
+                  <div className={styles.testimonialStars}>
                     {[...Array(5)].map((_, i) => (
                       <svg
                         key={i}
@@ -242,7 +236,7 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
-              <p className="text-gray-600">
+              <p className={styles.testimonialText}>
                 &quot;J&apos;ai acheté le set complet avec le bol, le fouet et
                 la cuillère. La qualité est remarquable et le design est
                 magnifique. Le service client était également très attentionné
@@ -251,14 +245,19 @@ export default function HomePage() {
             </div>
 
             {/* Testimonial 3 */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="flex items-center mb-4">
-                <div className="h-12 w-12 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 mr-4">
-                  <span>E</span>
+            <div className={styles.testimonialCard}>
+              <div className={styles.testimonialHeader}>
+                <div className={styles.testimonialAvatar}>
+                  <Image
+                    src="/images/avatars/emma.jpg"
+                    alt="Emma D."
+                    fill
+                    className={styles.avatarImage}
+                  />
                 </div>
                 <div>
-                  <h3 className="font-semibold">Emma D.</h3>
-                  <div className="flex text-yellow-400">
+                  <h3 className={styles.testimonialName}>Emma D.</h3>
+                  <div className={styles.testimonialStars}>
                     {[...Array(5)].map((_, i) => (
                       <svg
                         key={i}
@@ -273,7 +272,7 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
-              <p className="text-gray-600">
+              <p className={styles.testimonialText}>
                 &quot;Les biscuits japonais sont délicieux et se marient
                 parfaitement avec le matcha. La livraison a été rapide et
                 l&apos;emballage est très soigné. Je recommande vivement
@@ -285,24 +284,21 @@ export default function HomePage() {
       </section>
 
       {/* Newsletter Section */}
-      <section className="py-16 bg-green-800 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Restez informé</h2>
-          <p className="mb-8 max-w-2xl mx-auto">
+      <section className={styles.newsletter}>
+        <div className={styles.newsletterContainer}>
+          <h2 className={styles.newsletterTitle}>Restez informé</h2>
+          <p className={styles.newsletterDescription}>
             Inscrivez-vous à notre newsletter pour recevoir des conseils sur le
             matcha, des recettes exclusives et des offres spéciales.
           </p>
-          <form className="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
+          <form className={styles.newsletterForm}>
             <input
               type="email"
               placeholder="Votre adresse email"
-              className="flex-grow px-4 py-3 rounded-md text-gray-900 focus:outline-none focus:ring-2 focus:ring-green-500"
+              className={styles.newsletterInput}
               required
             />
-            <button
-              type="submit"
-              className="px-6 py-3 bg-green-600 rounded-md hover:bg-green-500 transition focus:outline-none focus:ring-2 focus:ring-green-300"
-            >
+            <button type="submit" className={styles.newsletterButton}>
               S&apos;abonner
             </button>
           </form>
